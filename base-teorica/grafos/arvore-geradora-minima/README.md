@@ -246,7 +246,7 @@ int Prim(vector<vector<pair<int, int>>> &grafo, int n){
 
         int peso = atual.first, v = atual.second;
         if(!visitados[v]){
-            resposta -= peso;
+            resposta += peso;
             visitaVertice(visitados, grafo, fila, v);
         }
     }
@@ -401,3 +401,5 @@ def Prim(grafo, n):
 ## Problemas
 
 * [1152 - Estradas Escuras](../../../problemas/grafos/1152/README.md)
+* [1764 - Itinerário do Papai Noel](../../../problemas/grafos/1764/README.md)
+* [1774 - Roteadores](../../../problemas/grafos/1774/README.md)

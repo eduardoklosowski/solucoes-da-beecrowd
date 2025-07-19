@@ -7,28 +7,28 @@ class FilaDePrioridade {
     }
 
     pai(i) {
-        return Math.floor(i/2);
+        return Math.floor(i / 2);
     }
 
-    filhoEsquerdo(i){
-        return 2*i;
+    filhoEsquerdo(i) {
+        return 2 * i;
     }
 
-    filhoDireito(i){
-        return 2*i + 1;
+    filhoDireito(i) {
+        return 2 * i + 1;
     }
 
-    comp(a, b){
+    comp(a, b) {
         return b[1] - a[1];
     }
 
-    corrigeSubindo(indice){
-        if(indice === 1){
+    corrigeSubindo(indice) {
+        if (indice === 1) {
             return;
         }
 
         let acima = this.pai(indice);
-        if(this.comp(this.arvore[acima], this.arvore[indice]) < 0){
+        if (this.comp(this.arvore[acima], this.arvore[indice]) < 0) {
             let temp = this.arvore[acima];
             this.arvore[acima] = this.arvore[indice];
             this.arvore[indice] = temp;
@@ -36,17 +36,17 @@ class FilaDePrioridade {
         }
     }
 
-    push(valor){
+    push(valor) {
         this.arvore.push(valor);
         this.corrigeSubindo(this.arvore.length - 1);
     }
 
-    corrigeDescendo(indice){
+    corrigeDescendo(indice) {
         let abaixo = this.filhoEsquerdo(indice);
-        if(abaixo >= this.arvore.length){
+        if (abaixo >= this.arvore.length) {
             return;
         }
-        if(this.comp(this.arvore[indice], this.arvore[abaixo]) < 0){
+        if (this.comp(this.arvore[indice], this.arvore[abaixo]) < 0) {
             let temp = this.arvore[abaixo];
             this.arvore[abaixo] = this.arvore[indice];
             this.arvore[indice] = temp;
@@ -54,10 +54,10 @@ class FilaDePrioridade {
         }
 
         abaixo = this.filhoDireito(indice);
-        if(abaixo >= this.arvore.length){
+        if (abaixo >= this.arvore.length) {
             return;
         }
-        if(this.comp(this.arvore[indice], this.arvore[abaixo]) < 0){
+        if (this.comp(this.arvore[indice], this.arvore[abaixo]) < 0) {
             let temp = this.arvore[abaixo];
             this.arvore[abaixo] = this.arvore[indice];
             this.arvore[indice] = temp;
@@ -65,8 +65,8 @@ class FilaDePrioridade {
         }
     }
 
-    pop(){
-        if(this.arvore.length <= 1){
+    pop() {
+        if (this.arvore.length <= 1) {
             return;
         }
 
@@ -77,11 +77,11 @@ class FilaDePrioridade {
         this.corrigeDescendo(1);
     }
 
-    top(){
+    top() {
         return this.arvore[1];
     }
 
-    empty(){
+    empty() {
         return this.arvore.length === 1;
     }
 }
@@ -89,9 +89,9 @@ class FilaDePrioridade {
 const visitaVertice = (visitados, grafo, fila, u) => {
     visitados[u] = true;
 
-    for(let i = 0; i < grafo[u].length; ++i){
+    for (let i = 0; i < grafo[u].length; ++i) {
         let aresta = grafo[u][i];
-        if(!visitados[aresta[0]]){
+        if (!visitados[aresta[0]]) {
             fila.push(aresta);
         }
     }
@@ -99,7 +99,7 @@ const visitaVertice = (visitados, grafo, fila, u) => {
 
 const Prim = (grafo, n) => {
     let visitados = [];
-    for(let i = 0; i < n; ++i){
+    for (let i = 0; i < n; ++i) {
         visitados.push(false);
     }
 
@@ -108,12 +108,12 @@ const Prim = (grafo, n) => {
     visitaVertice(visitados, grafo, fila, 0);
 
     let resposta = 0;
-    while(!fila.empty()){
+    while (!fila.empty()) {
         let atual = fila.top();
         fila.pop();
 
         let [v, peso] = atual;
-        if(!visitados[v]){
+        if (!visitados[v]) {
             resposta += peso;
             visitaVertice(visitados, grafo, fila, v);
         }
@@ -123,19 +123,19 @@ const Prim = (grafo, n) => {
 };
 
 let p = 0;
-while(p < lines.length){
+while (p < lines.length) {
     let [n, m] = lines[p++].trim().split(' ').map(x => parseInt(x));
 
-    if(n === 0 && m === 0){
+    if (n === 0 && m === 0) {
         break;
     }
 
     let grafo = [];
-    for(let i = 0; i < n; ++i){
+    for (let i = 0; i < n; ++i) {
         grafo.push([]);
     }
     let resposta = 0;
-    for(let i = 0; i < m; ++i){
+    for (let i = 0; i < m; ++i) {
         let aresta = lines[p++].trim().split(' ').map(x => parseInt(x));
         grafo[aresta[0]].push([aresta[1], aresta[2]]);
         grafo[aresta[1]].push([aresta[0], aresta[2]]);

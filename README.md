@@ -14,11 +14,11 @@ Abaixo está a contagem de problemas que já foram documentados nesta página di
 | [Estruturas e Bibliotecas](./problemas/estruturas-e-bibliotecas/README.md) | 20 | 180 | 11,11% |
 | [Matemática](./problemas/matematica/README.md) | 32 | 269 | 11,90% |
 | [Paradigmas](./problemas/paradigmas/README.md) | 8 | 215 | 3,72% |
-| [Grafos](./problemas/grafos/README.md) | 4 | 277 | 1,44% |
+| [Grafos](./problemas/grafos/README.md) | 25 | 277 | 9,03% |
 | [Geometria Computacional](./problemas/geometria-computacional/README.md) | 25 | 83 | 30,12% |
 | [SQL](./problemas/sql/README.md) | 50 | 50 | 100,00% |
 | | | |
-| Total | 524 | 2411 | 21,73% |
+| Total | 545 | 2411 | 22,60% |
 
 ## Aqui tem material teórico?
 

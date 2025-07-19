@@ -120,6 +120,32 @@ int filhoDireito(int i){
     return 2*i + 1;
 }
 
+void imprimeAresta(struct Aresta aresta){
+    printf("(%d, %d) [%d]\n", aresta.u, aresta.v, aresta.peso);
+}
+
+void imprimeArvore(struct FilaDePrioridade *fp, int i, int nivel){
+    if(i > fp->tamanho){
+        return;
+    }
+    int x;
+    for(x = 0; x < nivel; ++x){
+        printf("\t");
+    }
+    imprimeArvore(fp, filhoEsquerdo(i), nivel + 1);
+    imprimeArvore(fp, filhoDireito(i), nivel + 1);
+}
+
+void imprime(struct FilaDePrioridade *fp, struct Aresta aresta, int adiciona){
+    if(adiciona){
+        printf("adicionada aresta ");
+    }else{
+        printf("removida aresta ");
+    }    
+    imprimeAresta(aresta);
+    imprimeArvore(fp, 1, 0);
+}
+
 void corrigeSubindo(struct FilaDePrioridade *fp, int indice){
     if(indice == 1){
         return;

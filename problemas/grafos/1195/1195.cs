@@ -71,7 +71,7 @@ class No {
             }
         }else{
             No sucessor = this.dir;
-            while(sucessor.esq != null){
+            while(sucessor != null){
                 sucessor = sucessor.esq;
             }
             this.valor = sucessor.valor;

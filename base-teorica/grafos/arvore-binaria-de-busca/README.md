@@ -1038,4 +1038,9 @@ class ArvoreBinaria:
 
 ## Problemas
 
+* [1191 - Recuperação da Árvore](../../../problemas/grafos/1191/README.md)
+* [1194 - Prefixa, Infixa e Posfixa](../../../problemas/grafos/1194/README.md)
 * [1195 - Árvore Binária de Busca](../../../problemas/grafos/1195/README.md)
+* [1200 - Operações em ABP I](../../../problemas/grafos/1200/README.md)
+* [1201 - Operações em ABP II](../../../problemas/grafos/1201/README.md)
+* [1466 - Percurso em Árvore por Nível](../../../problemas/grafos/1466/README.md)

@@ -8,7 +8,7 @@ O [VisuAlgo](https://visualgo.net) é um _site_ muito bacana para ver códigos e
 
 ## Busca em profundidade
 
-A busca em profundidade, também conhecida por _Depth-First Search_ (e por isso abreviada por DFS), parte da ideia natural que normalmente teríamos seria de começar a partir de um determinado vértice e ir percorrendo seus vizinhos, caso eles já não tenham sido percorridos.
+A busca em profundidade, também conhecida por _Depth-First Search_ (e por isso abreviada por DFS), parte da ideia natural que normalmente teríamos seria de começar a partir de um determinado vértice e ir percorrendo seus vizinhos, caso eles já não tenham sido percorridos. Esse algoritmo pode ser usado para resolver diversos tipos de problemas envolvendo grafos, como a detecção de componentes conexos e ciclos em grafos.
 
 ### C
 ```c
@@ -151,7 +151,7 @@ for i in range(n):
 
 ## Busca em largura
 
-A busca em largura, também conhecida por _Breadth-First Search_ (e por isso abreviada por BFS), por sua vez, parte da ideia de buscar a árvore em níveis, olhando cada nível da árvore um por vez. Esse tipo de busca é comumente usada para determinar o caminho mínimo de um grafo ou minimizar o custo de algo, já que naturalmente esse algoritmo tenta fazer o menos número de passos possíveis.
+A busca em largura, também conhecida por _Breadth-First Search_ (e por isso abreviada por BFS), por sua vez, parte da ideia de buscar a árvore em níveis, olhando cada nível da árvore um por vez. Esse tipo de busca é comumente usada para determinar o caminho mínimo de um grafo sem pesos, já que como o algoritmo testa todos os caminhos de tamanho $n$ antes de tentar os de tamanho $n + 1$, então temos uma garantia teórica de que o caminho obtido é sempre o menor possível (se o caminho ótimo obtido pelo algoritmo tem $n$ arestas, significa que antes testamos todos os caminhos possíveis com $n - 1, n - 2, \ldots, 1$ aresta).
 
 ### C
 ```c
@@ -349,4 +349,13 @@ for i in range(n):
 ## Problemas
 
 * [1076 - Desenhando Labirintos](../../../problemas/grafos/1076/README.md)
+* [1081 - DFSr - Hierarquia de Profundidade](../../../problemas/grafos/1081/README.md)
 * [1082 - Componentes Conexos](../../../problemas/grafos/1082/README.md)
+* [1100 - Movimentos do Cavalo](../../../problemas/grafos/1100/README.md)
+* [1128 - Ir e Vir](../../../problemas/grafos/1128/README.md)
+* [1466 - Percurso em Árvore por Nível](../../../problemas/grafos/1466/README.md)
+* [1550 - Inversão](../../../problemas/grafos/1550/README.md)
+* [1610 - Dudu Faz Serviço](../../../problemas/grafos/1610/README.md)
+* [1855 - Mapa do Meistre](../../../problemas/grafos/1855/README.md)
+* [1905 - Polícia e Ladrão](../../../problemas/grafos/1905/README.md)
+* [1907 - Coloração de Cenários de Jogos](../../../problemas/grafos/1907/README.md)
