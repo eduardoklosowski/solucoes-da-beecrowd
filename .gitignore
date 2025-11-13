@@ -1,3 +1,5 @@
 .vscode
 templates
 scripts
+/book
+/mdbook
