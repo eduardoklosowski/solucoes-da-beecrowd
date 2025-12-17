@@ -2,3 +2,6 @@
 title = "Soluções da Beecrowd"
 authors = ["Raquel Marcolino"]
 language = "pt"
+
+[output.html]
+mathjax-support = true

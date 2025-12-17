@@ -28,13 +28,13 @@ Com isso, temos a seguinte recorrência:
 $$
 LCS(A, B) =
 \begin{cases}
-0, \text{se } A \text{ e } B \text{ são strings vazias,} \\
-LCS(A', B') + 1, \text{ se a última letra de } A \text{ e } B \text{ são iguais} \\
+0, \text{se } A \text{ e } B \text{ são strings vazias,} \\\\
+LCS(A', B') + 1, \text{ se a última letra de } A \text{ e } B \text{ são iguais} \\\\
 max(LCS(A, B'), LCS(A', B)), \text{ se a última letra de } A \text{ e } B \text{ não são iguais}
 \end{cases}
 $$
 
-considerando que $X'$ para qualquer _string_ $X$ seria a _string_ sem a última letra.
+considerando que \\(X'\\) para qualquer _string_ \\(X\\) seria a _string_ sem a última letra.
 
 #### Implementação
 

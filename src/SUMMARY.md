@@ -26,5 +26,5 @@
     * [Algoritmos raros](base-teorica/algoritmos-raros/README.md)
 * [Problemas](problemas/README.md)
     * [1000 - Hello World!](problemas/iniciante/1000/README.md)
-    * [1001 - Extremamente Básico](./iniciante/1001/README.md)
-    * [1002 - Área do Círculo](./iniciante/1002/README.md)
+    * [1001 - Extremamente Básico](problemas/iniciante/1001/README.md)
+    * [1002 - Área do Círculo](problemas/iniciante/1002/README.md)
